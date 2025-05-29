@@ -17,4 +17,10 @@ public class HomeController : Controller
     {
         return View();
     }
+    public IActionResult RespuestaHabitacion1(string input)
+    {
+        SalaEscape juego = new SalaEscape();
+        juego.Respuesta(input, 1);
+        return View();
+    }
 }

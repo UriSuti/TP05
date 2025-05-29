@@ -19329,13 +19329,53 @@
   "RootNamespace": "TP05",
   "Documents": [
     {
+      "FilePath": "c:\\Users\\49319580\\Downloads\\TP05\\Views\\Home\\pf.cshtml",
+      "TargetPath": "Views\\Home\\pf.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\49319580\\Downloads\\TP05\\Views\\Home\\SSI.cshtml",
+      "TargetPath": "Views\\Home\\SSI.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\49319580\\Downloads\\TP05\\Views\\Home\\tutorial.cshtml",
+      "TargetPath": "Views\\Home\\tutorial.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\49319580\\Downloads\\TP05\\Views\\Home\\arte.cshtml",
+      "TargetPath": "Views\\Home\\arte.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\49319580\\Downloads\\TP05\\Views\\Home\\creditos.cshtml",
+      "TargetPath": "Views\\Home\\creditos.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Users\\49319580\\Downloads\\TP05\\Views\\_ViewStart.cshtml",
       "TargetPath": "Views\\_ViewStart.cshtml",
       "FileKind": "mvc"
     },
     {
+      "FilePath": "c:\\Users\\49319580\\Downloads\\TP05\\Views\\Home\\prog.cshtml",
+      "TargetPath": "Views\\Home\\prog.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\49319580\\Downloads\\TP05\\Views\\Home\\introduccion.cshtml",
+      "TargetPath": "Views\\Home\\introduccion.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Users\\49319580\\Downloads\\TP05\\Views\\_ViewImports.cshtml",
       "TargetPath": "Views\\_ViewImports.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\49319580\\Downloads\\TP05\\Views\\Home\\bd.cshtml",
+      "TargetPath": "Views\\Home\\bd.cshtml",
       "FileKind": "mvc"
     },
     {
