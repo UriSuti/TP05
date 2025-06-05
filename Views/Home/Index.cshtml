@@ -1,9 +1,13 @@
 ﻿@{
     ViewData["Title"] = "Index";
 }
-<main id="index">
-    <h1>¡Bienvenido a "Egresa de Info"! Donde tu objetivo es sobrevivir al recorrido de tres años en esta especialidad</h1>
-    <a href='@Url.Action("Tutorial", "Home")'>Tutorial</a>
-    <a href='@Url.Action("Jugar", "Home")'>Jugar</a>
-    <a href='@Url.Action("Creditos", "Home")'>Créditos</a>
-</main>
+
+<div class="index-container">
+    <h1 class="titulo">¡Bienvenido a "Egresa de Info"! Donde tu objetivo es sobrevivir al recorrido de tres años en esta especialidad</h1>
+
+    <div class="botones">
+        <a class="btn-link" href='@Url.Action("Tutorial", "Home")'>Tutorial</a>
+        <a class="btn-link" href='@Url.Action("Introduccion", "Home")'>Jugar</a>
+        <a class="btn-link" href='@Url.Action("Creditos", "Home")'>Créditos</a>
+    </div>
+</div>

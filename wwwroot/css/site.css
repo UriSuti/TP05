@@ -22,11 +22,91 @@ footer {
   border-top: 1px solid #e9ecef;
 }
 
-#index{
-
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background-image: url('../Assets/Fondo.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  color: white;
+}
 
+.index-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 100px;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  min-height: 100vh;
+}
+
+.titulo {
+  font-size: 2rem;
+  margin-bottom: 40px;
+  max-width: 800px;
+}
+
+.botones {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.btn-link {
+  text-decoration: none;
+  padding: 12px 24px;
+  background-color: #0038b1;
+  color: white;
+  border-radius: 10px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.btn-link:hover {
+  background-color: #0038b1;
+}
+
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: Arial, sans-serif;
+}
+
+.fondo-container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.fondo-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  background-color: #000;
+}
+
+.boton-container {
+  position: absolute;
+  top: 15%;
+  left: 40%;
+}
+
+.boton-continuar {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background-color: #007bff;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  transition: background-color 0.3s;
+}
+
+.boton-continuar:hover {
+  background-color: #0056b3;
 }
