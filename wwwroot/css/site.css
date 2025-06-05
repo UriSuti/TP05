@@ -30,3 +30,174 @@ footer {
   background-repeat: no-repeat;
 
 }
+
+#programacion {
+  padding: 30px;
+  background-color: #f5f7fa;
+  color: #333;
+}
+
+#programacion h2 {
+  color: #2c3e50;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+#programacion #respuesta2 {
+  background-color: #ecf0f1;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  max-width: 800px;
+  overflow-x: auto;
+}
+
+#programacion pre {
+  margin: 0;
+  font-family: Consolas, monospace;
+  font-size: 15px;
+  line-height: 22px;
+  color: #2d3436;
+}
+
+#programacion form {
+  margin-top: 20px;
+  background-color: #ffffff;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0px 2px 5px rgba(0,0,0,0.1);
+  max-width: 500px;
+}
+
+#programacion form input[type="text"] {
+  padding: 8px;
+  width: 60%;
+  margin-right: 10px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+#programacion form input[type="submit"] {
+  padding: 8px 16px;
+  font-size: 14px;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#programacion form input[type="submit"]:hover {
+  background-color: #2980b9;
+}
+
+#tutorial {
+  background-image: url('../Assets/fondoTutorial.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  margin: 0;
+  padding: 40px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+#tutorial p {
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 25px;
+  border-radius: 10px;
+  max-width: 700px;
+  font-size: 1.1em;
+  line-height: 1.6;
+  text-align: justify;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.volver-link {
+  margin-top: 20px;
+  padding: 10px 18px;
+  background-color: rgba(255, 255, 255);
+  color: black;
+  text-decoration: none;
+  border-radius: 6px;
+  font-size: 1em;
+  border: 1px solid white;
+}
+
+.volver-link:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+#ssi {
+  background-image: url('../Assets/fondoSSI.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  padding: 40px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contenedor-ssi {
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 30px;
+  border-radius: 12px;
+  max-width: 600px;
+  width: 100%;
+  text-align: center;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.6);
+}
+
+.numero {
+  font-size: 2.5em;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+.instruccion {
+  font-size: 1.1em;
+  line-height: 1.6;
+  margin: 20px 0;
+}
+
+.formulario {
+  margin-top: 20px;
+}
+
+.formulario label {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.formulario input[type="text"] {
+  padding: 8px;
+  border-radius: 5px;
+  border: none;
+  width: 80%;
+  max-width: 300px;
+  margin-bottom: 15px;
+}
+
+.formulario input[type="submit"] {
+  padding: 10px 20px;
+  background-color: white;
+  color: black;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.formulario input[type="submit"]:hover {
+  background-color: lightgray;
+}
