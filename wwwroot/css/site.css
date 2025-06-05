@@ -21,3 +21,12 @@ footer {
   background-color: #f8f9fa;
   border-top: 1px solid #e9ecef;
 }
+
+#index{
+
+  background-image: url('../Assets/Fondo.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+}

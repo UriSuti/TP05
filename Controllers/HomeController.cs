@@ -23,4 +23,9 @@ public class HomeController : Controller
         juego.Respuesta(input, 1);
         return View();
     }
+
+    public IActionResult Tutorial()
+    {
+        return View("tutorial");
+    }
 }
