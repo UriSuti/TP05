@@ -84,7 +84,6 @@ public class HomeController : Controller
     {
         return View("tutorial");
     }
-<<<<<<< HEAD
         public IActionResult Introduccion()
     {
         return View("introduccion");
@@ -117,16 +116,4 @@ public class HomeController : Controller
         return View("Arte");
     }
 
-=======
-
-    public IActionResult Jugar()
-    {
-        return View("introduccion");
-    }
-
-    public IActionResult Creditos()
-    {
-        return View("creditos");
-    }
->>>>>>> f72e1dcac4ec36859ca6b68bc1787fecd16cdd35
 }
