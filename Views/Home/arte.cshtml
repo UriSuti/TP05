@@ -3,17 +3,13 @@
 }
 
 <div class="aula-container">
-  <img src="../Assets/Profe2.png" alt="Profe 2" class="fondo-img">
-  
-  <div class="desafio">
-    <h1>¡Escribí "OK" antes de que Mauri te vea!</h1>
-    @if (ViewBag.Error != null)
-    {
-        <div class="error">@ViewBag.Error</div>
-    }
-    <form method="post" asp-action="ArteRespuesta">
-        <input type="text" name="respuesta" placeholder="Escribí rápido..." autofocus />
+  <div class="desafio-container">
+    <div class="celular-container">
+      <img src="../Assets/celular-foto.png" alt="Chat de WhatsApp" class="celular-foto">
+      <form method="post" asp-action="ArteRespuesta" class="formulario-chat">
+        <input type="text" name="respuesta" placeholder="Escribí un mensaje..." autofocus />
         <button type="submit">Enviar</button>
-    </form>
+      </form>
+    </div>
   </div>
 </div>

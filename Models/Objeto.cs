@@ -1,3 +1,5 @@
+//dotnet add package Microsoft.AspNetCore.Session
+//dotnet add package NewtonSoft.Json
 using Newtonsoft.Json;
 namespace TP05.Models;
 
