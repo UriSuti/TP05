@@ -28,7 +28,7 @@ public class HomeController : Controller
     public IActionResult RespuestaHabitacion1(string input)
     {
         SalaEscape juego = Objeto.StringToObject<SalaEscape>(HttpContext.Session.GetString("juego"));
-        int respuesta = juego.Respuesta(input, 1);
+        int respuesta = juego.Respuesta(input, 0);
         HttpContext.Session.SetString("juego", Objeto.ObjectToString<SalaEscape>(juego));
         if (respuesta == 1)
         {
@@ -42,7 +42,7 @@ public class HomeController : Controller
     public IActionResult RespuestaHabitacion2(string input)
     {
         SalaEscape juego = Objeto.StringToObject<SalaEscape>(HttpContext.Session.GetString("juego"));
-        int respuesta = juego.Respuesta(input, 2);
+        int respuesta = juego.Respuesta(input, 1);
         HttpContext.Session.SetString("juego", Objeto.ObjectToString<SalaEscape>(juego));
         if (respuesta == 1)
         {
@@ -56,7 +56,7 @@ public class HomeController : Controller
     public IActionResult RespuestaHabitacion3(string input)
     {
         SalaEscape juego = Objeto.StringToObject<SalaEscape>(HttpContext.Session.GetString("juego"));
-        int respuesta = juego.Respuesta(input, 3);
+        int respuesta = juego.Respuesta(input, 2);
         HttpContext.Session.SetString("juego", Objeto.ObjectToString<SalaEscape>(juego));
         if (respuesta == 1)
         {
@@ -70,7 +70,7 @@ public class HomeController : Controller
     public IActionResult RespuestaHabitacion4(string input)
     {
         SalaEscape juego = Objeto.StringToObject<SalaEscape>(HttpContext.Session.GetString("juego"));
-        int respuesta = juego.Respuesta(input, 4);
+        int respuesta = juego.Respuesta(input, 3);
         HttpContext.Session.SetString("juego", Objeto.ObjectToString<SalaEscape>(juego));
         if (respuesta == 1)
         {
@@ -114,6 +114,11 @@ public class HomeController : Controller
 
         ViewBag.Error = "¡Te vio Mauri o te demoraste!";
         return View("Arte");
+    }
+
+    public IActionResult Creditos()
+    {
+        return View("creditos");
     }
 
 }
