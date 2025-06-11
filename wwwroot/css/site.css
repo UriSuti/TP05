@@ -332,9 +332,10 @@ footer {
 
 .formulario-chat {
   position: absolute;
-  bottom: 8%; 
-  left: 13%;  
-  width: 75%; 
+  bottom: 32%;
+  left: 17%;
+  width: 73%;
+  height: 5%;
   display: flex;
 }
 
