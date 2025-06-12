@@ -63,8 +63,9 @@ public class HomeController : Controller
     public IActionResult RespuestaHabitacion3(string input, int puntaje)
     {
         SalaEscape juego = Objeto.StringToObject<SalaEscape>(HttpContext.Session.GetString("juego"));
-        int respuesta = juego.Respuesta(input, 2);
+        int respuesta = juego.Respuesta(input.ToLower(), 2);
         HttpContext.Session.SetString("juego", Objeto.ObjectToString<SalaEscape>(juego));
+        juego.Notificaciones = puntaje;
         ViewBag.notas = juego.Nota;
         ViewBag.notis = juego.Notificaciones;
         if (respuesta == 1)
