@@ -60,7 +60,7 @@ public class HomeController : Controller
     }
 
     [HttpPost]
-    public IActionResult RespuestaHabitacion3(string input)
+    public IActionResult RespuestaHabitacion3(string input, int puntaje)
     {
         SalaEscape juego = Objeto.StringToObject<SalaEscape>(HttpContext.Session.GetString("juego"));
         int respuesta = juego.Respuesta(input, 2);

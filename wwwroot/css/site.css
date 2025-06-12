@@ -99,7 +99,14 @@ footer {
 .boton-container {
   position: absolute;
   top: 15%;
-  left: 40%;
+  left: 30%;
+}
+
+#Importante{
+
+  background-color: red;
+  font-size: xx-large;
+  width: max-content;
 }
 
 #programacion {
@@ -351,6 +358,12 @@ footer {
   font-size: 1rem;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
   z-index: 10;
+}
+
+.fondo-containerIntro{
+
+  background-image:url('../Assets/FondoProfe1.png') ;
+
 }
 
 .pagina-fondoBD {
