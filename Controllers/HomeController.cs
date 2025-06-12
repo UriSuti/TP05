@@ -53,20 +53,6 @@ public class HomeController : Controller
     }
 
     [HttpPost]
-    public IActionResult RespuestaHabitacion3(string input)
-    {
-        SalaEscape juego = Objeto.StringToObject<SalaEscape>(HttpContext.Session.GetString("juego"));
-        int respuesta = juego.Respuesta(input, 2);
-        HttpContext.Session.SetString("juego", Objeto.ObjectToString<SalaEscape>(juego));
-        if (respuesta == 1)
-        {
-            return View("bd");
-        } else {
-            return View("arte");
-        }
-    }
-
-    [HttpPost]
     public IActionResult RespuestaHabitacion4(string input)
     {
         SalaEscape juego = Objeto.StringToObject<SalaEscape>(HttpContext.Session.GetString("juego"));
@@ -100,25 +86,27 @@ public class HomeController : Controller
     }
 
     [HttpPost]
-    public IActionResult ArteRespuesta(string respuesta)
+    public IActionResult RespuestaHabitacion3(string input)
     {
-        string tiempoInicioStr = HttpContext.Session.GetString("TiempoInicio");
-        if (tiempoInicioStr != null && DateTime.TryParse(tiempoInicioStr, out DateTime tiempoInicio))
+        SalaEscape juego = Objeto.StringToObject<SalaEscape>(HttpContext.Session.GetString("juego"));
+        int respuesta = juego.Respuesta(input, 2);
+        HttpContext.Session.SetString("juego", Objeto.ObjectToString<SalaEscape>(juego));
+        if (respuesta == 1)
         {
-            TimeSpan tiempoTranscurrido = DateTime.Now - tiempoInicio;
-            if (tiempoTranscurrido.TotalSeconds <= 5 && respuesta.ToUpper() == "OK")
-            {
-                return RedirectToAction("SSI");
-            }
+            return View("bd");
+        } else {
+            return View("arte");
         }
-
-        ViewBag.Error = "¡Te vio Mauri o te demoraste!";
-        return View("Arte");
     }
 
     public IActionResult Creditos()
     {
         return View("creditos");
+    }
+
+    public IActionResult BD()
+    {
+        return View("bd");
     }
 
 }
