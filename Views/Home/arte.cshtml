@@ -6,7 +6,7 @@
   <div class="desafio-container">
     <div class="celular-container">
       <img src="../Assets/celular-foto.png"/>
-      <form method="POST" asp-action="ArteRespuesta" class="formulario-chat">
+      <form action='@Url.Action("RespuestaHabitacion3", "Home")' method=POST enctype="multipart/form-data" class="formulario-chat">
         <input type="text" name="respuesta" placeholder="Escribí un mensaje..." autofocus />
         <button type="submit">
           <img src="../Assets/enviarWhatsapp.png" alt="Enviar" width="24" height="24"/>

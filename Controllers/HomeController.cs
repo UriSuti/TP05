@@ -30,8 +30,9 @@ public class HomeController : Controller
     public IActionResult RespuestaHabitacion1(string input)
     {
         SalaEscape juego = Objeto.StringToObject<SalaEscape>(HttpContext.Session.GetString("juego"));
-        ViewBag.notas = juego.Nota;
+        ViewBag.nota = juego.Nota;
         ViewBag.notis = juego.Notificaciones;
+
         int respuesta = juego.Respuesta(input, 0);
         HttpContext.Session.SetString("juego", Objeto.ObjectToString<SalaEscape>(juego));
         if (respuesta == 1)
@@ -113,6 +114,11 @@ public class HomeController : Controller
     public IActionResult Creditos()
     {
         return View("creditos");
+    }
+
+    public IActionResult BD()
+    {
+        return View("bd");
     }
 
 }
