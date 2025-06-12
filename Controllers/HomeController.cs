@@ -60,8 +60,6 @@ public class HomeController : Controller
     }
 
     [HttpPost]
-<<<<<<< HEAD
-=======
     public IActionResult RespuestaHabitacion3(string input)
     {
         SalaEscape juego = Objeto.StringToObject<SalaEscape>(HttpContext.Session.GetString("juego"));
@@ -78,7 +76,6 @@ public class HomeController : Controller
     }
 
     [HttpPost]
->>>>>>> e85fa6ec9d9cd5779bb93d0fca56c1185ad88a6f
     public IActionResult RespuestaHabitacion4(string input)
     {
         SalaEscape juego = Objeto.StringToObject<SalaEscape>(HttpContext.Session.GetString("juego"));
@@ -106,30 +103,6 @@ public class HomeController : Controller
     {
         return View("SSI");
     }
-<<<<<<< HEAD
-
-    public IActionResult Arte()
-    {
-        HttpContext.Session.SetString("TiempoInicio", DateTime.Now.ToString("o"));
-        return View("Arte");
-    }
-
-    [HttpPost]
-    public IActionResult RespuestaHabitacion3(string input)
-    {
-        SalaEscape juego = Objeto.StringToObject<SalaEscape>(HttpContext.Session.GetString("juego"));
-        int respuesta = juego.Respuesta(input, 2);
-        HttpContext.Session.SetString("juego", Objeto.ObjectToString<SalaEscape>(juego));
-        if (respuesta == 1)
-        {
-            return View("bd");
-        } else {
-            return View("arte");
-        }
-    }
-
-=======
->>>>>>> e85fa6ec9d9cd5779bb93d0fca56c1185ad88a6f
     public IActionResult Creditos()
     {
         return View("creditos");
