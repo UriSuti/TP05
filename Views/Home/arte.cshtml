@@ -19,11 +19,12 @@
 
 <script>
 let puntaje = document.getElementById('puntaje').value
+let notificaciones = document.getElementById('notis')
 
 setInterval(() => {
-    alert("enter");
   puntaje++;
   document.getElementById('puntaje').value = puntaje;
+  notificaciones.innerText = "Tus notificaciones: " + puntaje;
 }, 5000);
 
 
