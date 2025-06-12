@@ -289,19 +289,17 @@ footer {
 
 .aula-container {
   background-image: url('../Assets/Fondo arte.png');
+  background-repeat: no-repeat;
   position: relative;
   width: 100%;
   height: 100vh;
   overflow: hidden;
 }
 
-.fondo-img {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;  /* O contain si querés que se vea entera */
-  background-repeat: no-repeat; /* NO repetir el fondo */
-  z-index: -1;
+#enviarWhatsapp{
+
+  border-radius: 200%;
+
 }
 
 .celular-img {
@@ -332,10 +330,10 @@ footer {
 
 .formulario-chat {
   position: absolute;
-  bottom: 32%;
-  left: 17%;
-  width: 73%;
-  height: 5%;
+  bottom: 31%;
+  left: 5%;
+  width: 68%;
+  height: 7%;
   display: flex;
 }
 
@@ -346,8 +344,4 @@ footer {
   border-radius: 20px;
   background-color: rgba(255, 255, 255, 0.9);
   outline: none;
-}
-
-.formulario-chat button {
-  display: none;
 }
