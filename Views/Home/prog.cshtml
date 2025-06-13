@@ -2,33 +2,37 @@
     ViewData["Title"] = "Programación";
 }
 
-<div id="programacion">
-    <h2>La contraseña es la línea donde se encuentra el error: </h2>
+<div class="pagina-fondoPROG">
+    <div id="programacion">
+        <h2>La contraseña es la línea donde se encuentra el error:</h2>
 
-    <div id="respuesta2">
-        <pre>
-        1. using System;
-        2.
-        3. public class Stanca {
-        4.    public bool AmaElCodigoLimpio = true;
-        5.
-        6.    public void CorregirTrabajo(string alumno){
-        7.      if (AmaElCodigoLimpio = false) {
-        8.            Console.WriteLine(alumno + ", aprobás sin revisar.");
-        9.      } else {
-        10.        Console.WriteLine(alumno + ", tu indentación está MAL.");
-        11.     }
-        12.   }
-        13. }
-        14. public static void Main(){
-        15.   Stanca profe = new Stanca();
-        16.   profe.AmaElCodigoLimpio = true;
-        17.   profe.CorregirTrabajo("Lautaro");
-        18. }
-        </pre>
+        <div id="respuesta2">
+            <pre>
+    1. using System;
+    2.
+    3. public class Stanca {
+    4.     public bool AmaElCodigoLimpio = true;
+    5.
+    6.     public void CorregirTrabajo(string alumno){
+    7.         if (AmaElCodigoLimpio = false) {
+    8.             Console.WriteLine(alumno + ", aprobás sin revisar.");
+    9.         } else {
+    10.            Console.WriteLine(alumno + ", tu indentación está MAL.");
+    11.        }
+    12.     }
+    13. }
+    14. public static void Main(){
+    15.     Stanca profe = new Stanca();
+    16.     profe.AmaElCodigoLimpio = true;
+    17.     profe.CorregirTrabajo("Lautaro");
+    18. }
+            </pre>
+        </div>
+
+        <form action='@Url.Action("RespuestaHabitacion2", "Home")' method="POST" enctype="multipart/form-data">
+            <label for="input">Respuesta:</label>
+            <input type="text" name="input" id="input">
+            <input type="submit" value="Enviar">
+        </form>
     </div>
-    <form action='@Url.Action("RespuestaHabitacion2", "Home")' method="POST" enctype="multipart/form-data">
-        Respuesta: <input type="text" name="input">
-        <input type="submit" value="Enviar">
-    </form>
 </div>

@@ -9,63 +9,63 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = TP05
 build_property.RootNamespace = TP05
-build_property.ProjectDir = C:\Users\uriel\Downloads\TP05\
+build_property.ProjectDir = C:\Users\49194950\Downloads\TP05\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 8.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\uriel\Downloads\TP05
+build_property.MSBuildProjectDirectory = C:\Users\49194950\Downloads\TP05
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/uriel/Downloads/TP05/Views/Home/arte.cshtml]
+[C:/Users/49194950/Downloads/TP05/Views/Home/arte.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxhcnRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/uriel/Downloads/TP05/Views/Home/bd.cshtml]
+[C:/Users/49194950/Downloads/TP05/Views/Home/bd.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxiZC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/uriel/Downloads/TP05/Views/Home/creditos.cshtml]
+[C:/Users/49194950/Downloads/TP05/Views/Home/creditos.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxjcmVkaXRvcy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/uriel/Downloads/TP05/Views/Home/Index.cshtml]
+[C:/Users/49194950/Downloads/TP05/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/uriel/Downloads/TP05/Views/Home/introduccion.cshtml]
+[C:/Users/49194950/Downloads/TP05/Views/Home/introduccion.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxpbnRyb2R1Y2Npb24uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/uriel/Downloads/TP05/Views/Home/pf.cshtml]
+[C:/Users/49194950/Downloads/TP05/Views/Home/pf.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxwZi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/uriel/Downloads/TP05/Views/Home/prog.cshtml]
+[C:/Users/49194950/Downloads/TP05/Views/Home/prog.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxwcm9nLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/uriel/Downloads/TP05/Views/Home/SSI.cshtml]
+[C:/Users/49194950/Downloads/TP05/Views/Home/SSI.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxTU0kuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/uriel/Downloads/TP05/Views/Home/tutorial.cshtml]
+[C:/Users/49194950/Downloads/TP05/Views/Home/tutorial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVx0dXRvcmlhbC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/uriel/Downloads/TP05/Views/Shared/_Layout.cshtml]
+[C:/Users/49194950/Downloads/TP05/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/uriel/Downloads/TP05/Views/Shared/_ValidationScriptsPartial.cshtml]
+[C:/Users/49194950/Downloads/TP05/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/uriel/Downloads/TP05/Views/_ViewImports.cshtml]
+[C:/Users/49194950/Downloads/TP05/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/uriel/Downloads/TP05/Views/_ViewStart.cshtml]
+[C:/Users/49194950/Downloads/TP05/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 

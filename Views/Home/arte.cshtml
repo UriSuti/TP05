@@ -3,17 +3,29 @@
 }
 
 <div class="aula-container">
-  <img src="../Assets/Profe2.png" alt="Profe 2" class="fondo-img">
-  
-  <div class="desafio">
-    <h1>¡Escribí "OK" antes de que Mauri te vea!</h1>
-    @if (ViewBag.Error != null)
-    {
-        <div class="error">@ViewBag.Error</div>
-    }
-    <form method="post" asp-action="ArteRespuesta">
-        <input type="text" name="respuesta" placeholder="Escribí rápido..." autofocus />
-        <button type="submit">Enviar</button>
-    </form>
+  <div class="desafio-container">
+    <div class="celular-container">
+      <img src="../Assets/celular-foto.png"/>
+      <form action='@Url.Action("RespuestaHabitacion3", "Home")' method=POST enctype="multipart/form-data" class="formulario-chat">
+        <input type="hidden" id="puntaje" name="puntaje" value=@ViewBag.notis>
+        <input type="text" name="respuesta" placeholder="Escribí un mensaje..." autofocus />
+        <button type="submit">
+          <img src="../Assets/enviarWhatsapp.png" alt="Enviar" width="24" height="24"/>
+        </button>
+        </form>
+    </div>
   </div>
 </div>
+
+<script>
+let puntaje = document.getElementById('puntaje').value
+let notificaciones = document.getElementById('notis')
+
+setInterval(() => {
+  puntaje++;
+  document.getElementById('puntaje').value = puntaje;
+  notificaciones.innerText = "Tus notificaciones: " + puntaje;
+}, 5000);
+
+
+</script>
