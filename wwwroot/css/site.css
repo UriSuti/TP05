@@ -446,3 +446,9 @@ footer {
 #BD input[type="submit"]:hover {
   background-color: #0b5ed7;
 }
+
+#qrcode {
+  width: 200px;
+  height: 200px;
+  margin: 20px auto;
+}

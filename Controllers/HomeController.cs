@@ -117,9 +117,28 @@ public class HomeController : Controller
         return View("creditos");
     }
 
-    public IActionResult BD()
+    public IActionResult BaseDeDatos()
     {
-        return View("bd");
+        string token = Guid.NewGuid().ToString();
+        HttpContext.Session.SetString("token", token);
+        BDJuego.GuardarPreguntaActiva(token, "¿Cuál es la clave primaria compuesta?");
+        ViewBag.Token = token;
+        ViewBag.UrlCelular = $"https://tuapp.com/Home/ResponderDesdeCelular?token={token}";
+        return View();
     }
 
+    [HttpPost]
+    public IActionResult EnviarRespuestaDesdeCelular(string token, string respuesta)
+    {
+        BDJuego.ValidarRespuesta(token, respuesta);
+        return View("Gracias"); // o un mensaje de éxito
+    }
+
+    [HttpGet]
+    public JsonResult EstadoRespuesta(string token)
+    {
+        if (string.IsNullOrEmpty(token)) return Json(new { correcto = false });
+        bool correcto = BDJuego.FueRespondidoCorrectamente(token);
+        return Json(new { correcto });
+    }
 }

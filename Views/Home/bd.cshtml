@@ -4,12 +4,28 @@
 
 <div class="pagina-fondoBD">
     <div id="BD">
-        <p>"Cada alumno puede inscribirse en varias materias, y cada materia puede tener varios alumnos."</p>
-        <h2>¿Cuál es la cardinalidad? Indicar en mayúscula</h2>
-        <form action='@Url.Action("RespuestaHabitacion4", "Home")' method="POST" enctype="multipart/form-data">
-            <label for="input">Respuesta:</label>
-            <input type="text" name="input" id="input" required>
-            <input type="submit" value="Enviar">
-        </form>
+        <h1>Escanea este qr con tu celular</h1>
+        <div id="qrcode"></div>
     </div>
 </div>
+
+
+<script>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+  const token = '@ViewBag.Token';
+  const urlCelular = '@ViewBag.UrlCelular';
+
+
+
+  new QRCode(document.getElementById("qrcode"), urlCelular);
+
+  setInterval(() => {
+    fetch(`/Home/EstadoRespuesta?token=${token}`)
+      .then(r => r.json())
+      .then(data => {
+        if (data.correcto) {
+          window.location.href = "/Home/SiguientePantalla";
+        }
+      });
+  }, 2000);
+</script>

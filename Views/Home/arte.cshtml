@@ -8,7 +8,7 @@
       <img src="../Assets/celular-foto.png"/>
       <form action='@Url.Action("RespuestaHabitacion3", "Home")' method=POST enctype="multipart/form-data" class="formulario-chat">
         <input type="hidden" id="puntaje" name="puntaje" value=@ViewBag.notis>
-        <input type="text" name="respuesta" placeholder="Escribí un mensaje..." autofocus />
+        <input type="text" name="input" placeholder="Escribí un mensaje..." autofocus />
         <button type="submit">
           <img src="../Assets/enviarWhatsapp.png" alt="Enviar" width="24" height="24"/>
         </button>
@@ -22,6 +22,7 @@ let puntaje = document.getElementById('puntaje').value
 let notificaciones = document.getElementById('notis')
 
 setInterval(() => {
+  alert("Tardaste 5 segundos, notificacion")
   puntaje++;
   document.getElementById('puntaje').value = puntaje;
   notificaciones.innerText = "Tus notificaciones: " + puntaje;
