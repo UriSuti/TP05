@@ -3,10 +3,7 @@ using Newtonsoft.Json;
 
 public class SalaEscape
 {
-    [JsonProperty]
-    public int Nota { get; private set; } = 10;
-
-    [JsonProperty]
+    public int Nota = 10;
     public int Notificaciones = 0;
     [JsonProperty]
     private int EstadoJuego=1;
@@ -23,7 +20,6 @@ public class SalaEscape
             }
             else
             {
-                Nota--;
                 return 2;
             }
 
