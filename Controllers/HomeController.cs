@@ -30,10 +30,14 @@ public class HomeController : Controller
     public IActionResult RespuestaHabitacion1(string input)
     {
         SalaEscape juego = Objeto.StringToObject<SalaEscape>(HttpContext.Session.GetString("juego"));
-        ViewBag.nota = juego.Nota;
-        ViewBag.notis = juego.Notificaciones;
 
         int respuesta = juego.Respuesta(input, 0);
+        if (respuesta != 1)
+        {
+            juego.Nota--;
+        }
+        ViewBag.notas = juego.Nota;
+        ViewBag.notis = juego.Notificaciones;
         HttpContext.Session.SetString("juego", Objeto.ObjectToString<SalaEscape>(juego));
         if (respuesta == 1)
         {
@@ -48,9 +52,13 @@ public class HomeController : Controller
     {
         SalaEscape juego = Objeto.StringToObject<SalaEscape>(HttpContext.Session.GetString("juego"));
         int respuesta = juego.Respuesta(input, 1);
-        HttpContext.Session.SetString("juego", Objeto.ObjectToString<SalaEscape>(juego));
+        if (respuesta != 1)
+        {
+            juego.Nota--;
+        }
         ViewBag.notas = juego.Nota;
         ViewBag.notis = juego.Notificaciones;
+        HttpContext.Session.SetString("juego", Objeto.ObjectToString<SalaEscape>(juego));
         if (respuesta == 1)
         {
             return View("arte");
@@ -63,11 +71,16 @@ public class HomeController : Controller
     public IActionResult RespuestaHabitacion3(string input, int puntaje)
     {
         SalaEscape juego = Objeto.StringToObject<SalaEscape>(HttpContext.Session.GetString("juego"));
-        int respuesta = juego.Respuesta(input.ToLower(), 2);
-        HttpContext.Session.SetString("juego", Objeto.ObjectToString<SalaEscape>(juego));
-        juego.Notificaciones = puntaje;
+        input = input.ToLower();
+        int respuesta = juego.Respuesta(input, 2);
+        if (respuesta != 1)
+        {
+            juego.Nota--;
+        }
         ViewBag.notas = juego.Nota;
+        juego.Notificaciones = puntaje;
         ViewBag.notis = juego.Notificaciones;
+        HttpContext.Session.SetString("juego", Objeto.ObjectToString<SalaEscape>(juego));
         if (respuesta == 1)
         {
             return View("bd");
@@ -81,9 +94,13 @@ public class HomeController : Controller
     {
         SalaEscape juego = Objeto.StringToObject<SalaEscape>(HttpContext.Session.GetString("juego"));
         int respuesta = juego.Respuesta(input, 3);
-        HttpContext.Session.SetString("juego", Objeto.ObjectToString<SalaEscape>(juego));
+        if (respuesta != 1)
+        {
+            juego.Nota--;
+        }
         ViewBag.notas = juego.Nota;
         ViewBag.notis = juego.Notificaciones;
+        HttpContext.Session.SetString("juego", Objeto.ObjectToString<SalaEscape>(juego));
         if (respuesta == 1)
         {
             return View("pf");
@@ -99,27 +116,21 @@ public class HomeController : Controller
         public IActionResult Introduccion()
     {
         SalaEscape juego = Objeto.StringToObject<SalaEscape>(HttpContext.Session.GetString("juego"));
-        HttpContext.Session.SetString("juego", Objeto.ObjectToString<SalaEscape>(juego));
         ViewBag.notas = juego.Nota;
         ViewBag.notis = juego.Notificaciones;
+        HttpContext.Session.SetString("juego", Objeto.ObjectToString<SalaEscape>(juego));
         return View("introduccion");
     }
     public IActionResult SSI()
     {
         SalaEscape juego = Objeto.StringToObject<SalaEscape>(HttpContext.Session.GetString("juego"));
-        HttpContext.Session.SetString("juego", Objeto.ObjectToString<SalaEscape>(juego));
         ViewBag.notas = juego.Nota;
         ViewBag.notis = juego.Notificaciones;
+        HttpContext.Session.SetString("juego", Objeto.ObjectToString<SalaEscape>(juego));
         return View("SSI");
     }
     public IActionResult Creditos()
     {
         return View("creditos");
     }
-
-    public IActionResult BD()
-    {
-        return View("bd");
-    }
-
 }
