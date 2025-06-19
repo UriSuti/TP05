@@ -19384,6 +19384,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "c:\\Users\\49194950\\Downloads\\TP05\\Views\\Home\\pantallaCelu.cshtml",
+      "TargetPath": "Views\\Home\\pantallaCelu.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Users\\49194950\\Downloads\\TP05\\Views\\_ViewStart.cshtml",
       "TargetPath": "Views\\_ViewStart.cshtml",
       "FileKind": "mvc"
