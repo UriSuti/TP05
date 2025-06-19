@@ -19334,6 +19334,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "c:\\Users\\49319580\\TP05\\Views\\Home\\final.cshtml",
+      "TargetPath": "Views\\Home\\final.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Users\\49319580\\TP05\\Views\\Home\\bd.cshtml",
       "TargetPath": "Views\\Home\\bd.cshtml",
       "FileKind": "mvc"
