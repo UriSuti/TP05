@@ -129,14 +129,8 @@ public class HomeController : Controller
         HttpContext.Session.SetString("juego", Objeto.ObjectToString<SalaEscape>(juego));
         return View("SSI");
     }
-    [HttpGet]
-    public IActionResult PreguntaCelular()
-    {
-        return View();
-    }
-
     [HttpPost]
-    public IActionResult PreguntaCelular(string input)
+    public IActionResult pantallaCelu(string input)
     {
         SalaEscape juego = Objeto.StringToObject<SalaEscape>(HttpContext.Session.GetString("juego"));
         int respuesta = juego.Respuesta(input, 3);
@@ -149,9 +143,9 @@ public class HomeController : Controller
         HttpContext.Session.SetString("juego", Objeto.ObjectToString<SalaEscape>(juego));
         if (respuesta == 1)
         {
-            return View("pantallaCelu");
-        } else {
             return View("correcto");
+        } else {
+            return View("pantallaCelu");
         }
     }
     public IActionResult Creditos()

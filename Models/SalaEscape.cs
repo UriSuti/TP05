@@ -11,7 +11,7 @@ public class SalaEscape
     private string[] Respuestas = new string[5] {"1001","7","ok","NM", "jessi"}; 
     public int Respuesta(string input, int sala)
     {
-        if (sala + 1 >= EstadoJuego){
+        if (sala + 1 >= EstadoJuego || sala==4){
 
             if (input == Respuestas[sala])
             {
