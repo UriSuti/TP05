@@ -133,7 +133,6 @@ public class HomeController : Controller
     {
         return View("creditos");
     }
-}
 
     public IActionResult BaseDeDatos()
     {
