@@ -152,4 +152,9 @@ public class HomeController : Controller
     {
         return View("creditos");
     }
+
+    public IActionResult Final()
+    {
+        return View("final");
+    }
 }
