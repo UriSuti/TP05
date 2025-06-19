@@ -10,11 +10,22 @@
 
 <body>
 
-    <div class="vidas-info">
-      <p>Tu nota promedio: @ViewBag.notas</p>
-      <p id="notis">Tus notificaciones: @ViewBag.notis</p>
-    </div>
+    @{
+        var custom = ViewData["CustomLayoutOption"] as bool? ?? false;
+    }
 
+    @if (custom)
+    {
+        <!-- No mostrar nada -->
+    }
+    else
+    {
+        <div class="vidas-info">
+            <p>Tu nota promedio: @ViewBag.notas</p>
+            <p id="notis">Tus notificaciones: @ViewBag.notis</p>
+        </div>
+    }
+    
     <main role="main">
         @RenderBody()
     </main>

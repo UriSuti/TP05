@@ -158,4 +158,9 @@ public class HomeController : Controller
         bool correcto = BDJuego.FueRespondidoCorrectamente(token);
         return Json(new { correcto });
     }
+
+    public IActionResult Final()
+    {
+        return View("final");
+    }
 }
