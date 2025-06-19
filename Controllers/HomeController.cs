@@ -93,7 +93,7 @@ public class HomeController : Controller
     public IActionResult RespuestaHabitacion4(string input)
     {
         SalaEscape juego = Objeto.StringToObject<SalaEscape>(HttpContext.Session.GetString("juego"));
-        int respuesta = juego.Respuesta(input, 3);
+        int respuesta = juego.Respuesta(input, 5);
         if (respuesta != 1)
         {
             juego.Nota--;
@@ -129,34 +129,33 @@ public class HomeController : Controller
         HttpContext.Session.SetString("juego", Objeto.ObjectToString<SalaEscape>(juego));
         return View("SSI");
     }
-    public IActionResult Creditos()
+    [HttpGet]
+    public IActionResult PreguntaCelular()
     {
-        return View("creditos");
-    }
-}
-
-    public IActionResult BaseDeDatos()
-    {
-        string token = Guid.NewGuid().ToString();
-        HttpContext.Session.SetString("token", token);
-        BDJuego.GuardarPreguntaActiva(token, "¿Cuál es la clave primaria compuesta?");
-        ViewBag.Token = token;
-        ViewBag.UrlCelular = $"https://tuapp.com/Home/ResponderDesdeCelular?token={token}";
         return View();
     }
 
     [HttpPost]
-    public IActionResult EnviarRespuestaDesdeCelular(string token, string respuesta)
+    public IActionResult PreguntaCelular(string input)
     {
-        BDJuego.ValidarRespuesta(token, respuesta);
-        return View("Gracias"); // o un mensaje de éxito
+        SalaEscape juego = Objeto.StringToObject<SalaEscape>(HttpContext.Session.GetString("juego"));
+        int respuesta = juego.Respuesta(input, 3);
+        if (respuesta != 1)
+        {
+            juego.Nota--;
+        }
+        ViewBag.notas = juego.Nota;
+        ViewBag.notis = juego.Notificaciones;
+        HttpContext.Session.SetString("juego", Objeto.ObjectToString<SalaEscape>(juego));
+        if (respuesta == 1)
+        {
+            return View("pantallaCelu");
+        } else {
+            return View("correcto");
+        }
     }
-
-    [HttpGet]
-    public JsonResult EstadoRespuesta(string token)
+    public IActionResult Creditos()
     {
-        if (string.IsNullOrEmpty(token)) return Json(new { correcto = false });
-        bool correcto = BDJuego.FueRespondidoCorrectamente(token);
-        return Json(new { correcto });
+        return View("creditos");
     }
 }
