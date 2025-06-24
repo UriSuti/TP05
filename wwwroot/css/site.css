@@ -452,3 +452,102 @@ footer {
   height: 200px;
   margin: 20px auto;
 }
+
+.correcto-wrapper {
+  background-color: #e6f7ec;
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 0;
+  margin: 0;
+}
+
+.correcto-container {
+  background-color: white;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  text-align: center;
+  max-width: 400px;
+  width: 90%;
+}
+
+.correcto-container h1 {
+  font-size: 1.8rem;
+  color: #28a745;
+  margin-bottom: 20px;
+}
+
+.correcto-container p {
+  font-size: 1.1rem;
+  margin: 10px 0;
+  color: #2c3e50;
+}
+
+.clave {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #2c3e50;
+  background-color: #f1f1f1;
+  padding: 10px 20px;
+  border-radius: 8px;
+  margin: 15px 0;
+  display: inline-block;
+}
+
+#bodyCelu {
+  margin: 0;
+  padding: 0;
+  background-color: #f7f7f7;
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+.contenedor {
+  color: #007bff;
+  background-color: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  text-align: center;
+  max-width: 400px;
+  width: 90%;
+}
+
+h2 {
+  font-size: 1.3rem;
+  margin-bottom: 20px;
+}
+
+input[type="text"] .celular {
+  padding: 10px;
+  width: 100%;
+  font-size: 1rem;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+button .celular {
+  padding: 10px 20px;
+  font-size: 1rem;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+button:hover .celular {
+  background-color: #0056b3;
+}
+
+.error {
+  color: red;
+  font-weight: bold;
+  margin-bottom: 15px;
+}

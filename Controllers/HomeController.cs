@@ -93,7 +93,7 @@ public class HomeController : Controller
     public IActionResult RespuestaHabitacion4(string input)
     {
         SalaEscape juego = Objeto.StringToObject<SalaEscape>(HttpContext.Session.GetString("juego"));
-        int respuesta = juego.Respuesta(input, 5);
+        int respuesta = juego.Respuesta(input, 4);
         if (respuesta != 1)
         {
             juego.Nota--;
@@ -148,6 +148,13 @@ public class HomeController : Controller
             return View("pantallaCelu");
         }
     }
+
+    public IActionResult pantallaCelu(){
+
+        return View();
+
+    }
+
     public IActionResult Creditos()
     {
         return View("creditos");

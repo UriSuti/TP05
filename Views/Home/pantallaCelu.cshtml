@@ -2,17 +2,18 @@
     ViewData["Title"] = "Pregunta desde el Celular";
 }
 
+<body id="bodyCelu">
+    <div class="contenedor">
+        <h2>¿Cómo se representa una relación muchos a muchos?</h2>
 
-<div class="contenedor">
-    <h2>¿Cómo se representa una relación muchos a muchos?</h2>
+        @if (ViewBag.Error != null)
+        {
+            <p class="error">@ViewBag.Error</p>
+        }
 
-    @if (ViewBag.Error != null)
-    {
-        <p class="error">@ViewBag.Error</p>
-    }
-
-    <form method="post" asp-action="PreguntaCelular">
-        <input type="text" name="respuesta" placeholder="Tu respuesta..." required />
-        <button type="submit">Enviar</button>
-    </form>
-</div>
+        <form action='@Url.Action("pantallaCelu", "Home")' method=POST enctype="multipart/form-data">
+            <input class="celular" type="text" name="input" placeholder="Tu respuesta..." required />
+            <button class="celular" type="submit">Enviar</button>
+        </form>
+    </div>
+</body>

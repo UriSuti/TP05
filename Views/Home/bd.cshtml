@@ -6,8 +6,14 @@
     <div id="BD">
         <h1>Escanea este qr con tu celular</h1>
         <div id="qrcode"></div>
+          <form action='@Url.Action("RespuestaHabitacion4", "Home")' method="POST" enctype="multipart/form-data">
+            <label for="input">Respuesta:</label>
+            <input type="text" name="input" id="input">
+            <input type="submit" value="Enviar">
+        </form>
     </div>
 </div>
+
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
 <script>
