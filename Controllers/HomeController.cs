@@ -132,7 +132,7 @@ public class HomeController : Controller
     [HttpPost]
     public IActionResult pantallaCelu2(string input)
     {
-        if (input == "NM")
+        if (input.ToUpper() == "NM" || input.ToUpper() == "MN" || input.ToUpper() == "N:M" || input.ToUpper() == "M:N")
         {
             return View("correcto");
         } else {
