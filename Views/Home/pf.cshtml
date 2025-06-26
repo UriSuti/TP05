@@ -1,3 +1,74 @@
 @{
     ViewData["Title"] = "Proyecto Final";
 }
+
+<div id="cafe-final">
+    <div class="cafe-contenedor">
+        <h2>Bienvenidos al Proyecto Final</h2>
+        <p class="cafe-instrucciones">Arrastrá un sobre de café a la taza que creas correcta. Stanca solo toma una combinación exacta.</p>
+
+        <div class="cafe-pistas">
+            <p><strong>Pista:</strong></p>
+            <ul>
+                <li>Odia los <code>null</code>.</li>
+                <li>Stanca usa sobres #000</li>
+                <li>Solo toma café con nombre de función.</li>
+            </ul>
+        </div>
+
+        @if (ViewBag.Mensaje != null)
+        {
+            <div class="cafe-resultado">
+                <h3>@ViewBag.Mensaje</h3>
+            </div>
+        }
+
+        <div class="cafe-interactivo">
+            <div class="cafe-columna">
+                <h4>Tazas</h4>
+                <div class="cafe-item taza" data-taza="roja">🟥 Roja</div>
+                <div class="cafe-item taza" data-taza="azul">🟦 Azul</div>
+                <div class="cafe-item taza" data-taza="negra">⬛ Negra</div>
+                <div class="cafe-item taza" data-taza="blanca">⬜ Blanca</div>
+                <div class="cafe-item taza" data-taza="verde">🟩 Verde</div>
+            </div>
+
+            <div class="cafe-columna">
+                <h4>Sobres</h4>
+                <div class="cafe-item sobre" draggable="true" data-sobre="Instantáneo++">Instantáneo++</div>
+                <div class="cafe-item sobre" draggable="true" data-sobre="TrueBrew">TrueBrew</div>
+                <div class="cafe-item sobre" draggable="true" data-sobre="null">null</div>
+                <div class="cafe-item sobre" draggable="true" data-sobre="ConsoleLatte">ConsoleLatte()</div>
+                <div class="cafe-item sobre" draggable="true" data-sobre="404 Not Found">404 Not Found</div>
+            </div>
+        </div>
+
+        <form id="formCafé" method="POST" action='@Url.Action("RespuestaCafeFinal", "Home")'>
+            <input type="hidden" name="taza" id="inputTaza" />
+            <input type="hidden" name="sobre" id="inputSobre" />
+        </form>
+    </div>
+</div>
+
+<script>
+    let draggedSobre = null;
+
+    document.querySelectorAll('.sobre').forEach(sobre => {
+        sobre.addEventListener('dragstart', function () {
+            draggedSobre = this.getAttribute('data-sobre');
+        });
+    });
+
+    document.querySelectorAll('.taza').forEach(taza => {
+        taza.addEventListener('dragover', function (e) {
+            e.preventDefault();
+        });
+
+        taza.addEventListener('drop', function () {
+            const tazaColor = this.getAttribute('data-taza');
+            document.getElementById('inputTaza').value = tazaColor;
+            document.getElementById('inputSobre').value = draggedSobre;
+            document.getElementById('formCafé').submit();
+        });
+    });
+</script>

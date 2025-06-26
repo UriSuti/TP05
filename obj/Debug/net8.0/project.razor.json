@@ -19394,6 +19394,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "c:\\Users\\49194950\\Downloads\\TP05\\Views\\Home\\desaprobado.cshtml",
+      "TargetPath": "Views\\Home\\desaprobado.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Users\\49194950\\Downloads\\TP05\\Views\\Home\\correcto.cshtml",
       "TargetPath": "Views\\Home\\correcto.cshtml",
       "FileKind": "mvc"

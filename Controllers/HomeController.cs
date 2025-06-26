@@ -153,4 +153,34 @@ public class HomeController : Controller
     {
         return View("final");
     }
+
+    [HttpPost]
+    public IActionResult RespuestaCafeFinal(string taza, string sobre)
+    {
+        SalaEscape juego = Objeto.StringToObject<SalaEscape>(HttpContext.Session.GetString("juego"));
+
+        if (taza == "blanca" && sobre == "ConsoleLatte")
+        {
+            if (juego.Nota >= 6)
+            {
+                return View("final");
+                
+            }
+            else{
+
+                return View("desaprobado");
+            }
+
+        }
+        else
+        {
+            juego.Nota--;
+            ViewBag.Mensaje = "❌ Ese café no convence a Stanca. Probá otra combinación.";
+        }
+
+        ViewBag.notas = juego.Nota;
+        ViewBag.notis = juego.Notificaciones;
+        HttpContext.Session.SetString("juego", Objeto.ObjectToString<SalaEscape>(juego));
+        return View("pf");
+    }
 }
