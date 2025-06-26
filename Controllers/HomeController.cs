@@ -93,7 +93,7 @@ public class HomeController : Controller
     public IActionResult RespuestaHabitacion4(string input)
     {
         SalaEscape juego = Objeto.StringToObject<SalaEscape>(HttpContext.Session.GetString("juego"));
-        int respuesta = juego.Respuesta(input, 4);
+        int respuesta = juego.Respuesta(input, 3);
         if (respuesta != 1)
         {
             juego.Nota--;
@@ -113,7 +113,7 @@ public class HomeController : Controller
     {
         return View("tutorial");
     }
-        public IActionResult Introduccion()
+    public IActionResult Introduccion()
     {
         SalaEscape juego = Objeto.StringToObject<SalaEscape>(HttpContext.Session.GetString("juego"));
         ViewBag.notas = juego.Nota;
@@ -130,18 +130,9 @@ public class HomeController : Controller
         return View("SSI");
     }
     [HttpPost]
-    public IActionResult pantallaCelu(string input)
+    public IActionResult pantallaCelu2(string input)
     {
-        SalaEscape juego = Objeto.StringToObject<SalaEscape>(HttpContext.Session.GetString("juego"));
-        int respuesta = juego.Respuesta(input, 3);
-        if (respuesta != 1)
-        {
-            juego.Nota--;
-        }
-        ViewBag.notas = juego.Nota;
-        ViewBag.notis = juego.Notificaciones;
-        HttpContext.Session.SetString("juego", Objeto.ObjectToString<SalaEscape>(juego));
-        if (respuesta == 1)
+        if (input == "NM")
         {
             return View("correcto");
         } else {
@@ -150,9 +141,7 @@ public class HomeController : Controller
     }
 
     public IActionResult pantallaCelu(){
-
         return View();
-
     }
 
     public IActionResult Creditos()

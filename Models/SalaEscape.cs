@@ -8,7 +8,7 @@ public class SalaEscape
     [JsonProperty]
     private int EstadoJuego=1;
     [JsonProperty]
-    private string[] Respuestas = new string[5] {"1001","7","ok","NM", "jessi"}; 
+    private string[] Respuestas = new string[4] {"1001","7","ok", "jessi"}; 
     public int Respuesta(string input, int sala)
     {
         if (sala + 1 >= EstadoJuego || sala==4){

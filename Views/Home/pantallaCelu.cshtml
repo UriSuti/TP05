@@ -1,5 +1,6 @@
 @{
     ViewData["Title"] = "Pregunta desde el Celular";
+    ViewData["CustomLayoutOption"] = true;
 }
 
 <body id="bodyCelu">
@@ -11,7 +12,7 @@
             <p class="error">@ViewBag.Error</p>
         }
 
-        <form action='@Url.Action("pantallaCelu", "Home")' method=POST enctype="multipart/form-data">
+        <form action='@Url.Action("pantallaCelu2", "Home")' method=POST enctype="multipart/form-data">
             <input class="celular" type="text" name="input" placeholder="Tu respuesta..." required />
             <button class="celular" type="submit">Enviar</button>
         </form>
