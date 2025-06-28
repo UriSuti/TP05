@@ -43,7 +43,7 @@
             </div>
         </div>
 
-        <form id="formCafé" method="POST" action='@Url.Action("RespuestaCafeFinal", "Home")'>
+        <form id="formCafé" method="POST" action='@Url.Action("RespuestaCafeFinal", "Home")' enctype="multipart/form-data">
             <input type="hidden" name="taza" id="inputTaza" />
             <input type="hidden" name="sobre" id="inputSobre" />
         </form>
