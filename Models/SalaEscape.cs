@@ -3,6 +3,7 @@ using Newtonsoft.Json;
 
 public class SalaEscape
 {
+    static public int tiempo = 0;
     public int Nota = 10;
     public int Notificaciones = 0;
     [JsonProperty]
