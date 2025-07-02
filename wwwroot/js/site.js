@@ -1,30 +1,23 @@
-﻿let segs = parseInt(sessionStorage.getItem("segs")) || 0;
+let segs = parseInt(sessionStorage.getItem("segs")) || 0;
 let mins = parseInt(sessionStorage.getItem("mins")) || 0;
 
-document.getElementById('tiempo').innerHTML = `${mins}:${segs}` ;
+function mostrarTiempo() {
+  const formatoMins = mins.toString().padStart(2, '0');
+  const formatoSegs = segs.toString().padStart(2, '0');
+  document.getElementById('tiempo').innerHTML = `${formatoMins}:${formatoSegs}`;
+}
 
+mostrarTiempo();
 
 setInterval(() => {
-    
-    segs++;
-    if(segs >= 60){
-        segs = 0
-        mins++
-    }
+  segs++;
+  if (segs >= 60) {
+    segs = 0;
+    mins++;
+  }
 
-    if(segs < 10){
+  sessionStorage.setItem("segs", segs);
+  sessionStorage.setItem("mins", mins);
 
-        document.getElementById('tiempo').innerHTML = `${mins}:0${segs}` ;
-
-    }else{
-
-        document.getElementById('tiempo').innerHTML = `${mins}:${segs}` ;
-
-    }
-
-
-    sessionStorage.setItem("segs", segs);
-    sessionStorage.setItem("mins", mins);
-    sessionStorage.setItem("horas", horas);
-
+  mostrarTiempo();
 }, 1000);
