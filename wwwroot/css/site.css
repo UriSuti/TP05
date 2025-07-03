@@ -102,11 +102,18 @@ footer {
   left: 30%;
 }
 
-#Importante{
-
-  background-color: red;
+#Importante {
+  background: rgba(255, 255, 255, 0.2);
+  color: #fff;
   font-size: xx-large;
+  font-weight: 600;
+  padding: 12px 24px;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  border-radius: 12px;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
   width: max-content;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
 }
 
 .pagina-fondoPROG {
